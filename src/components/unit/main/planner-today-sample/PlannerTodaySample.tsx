@@ -40,27 +40,27 @@ const PlannerTodaySample = () => {
     }
   };
 
-  const allCheckHandler = async (checked: boolean) => {
-    try {
-      if (checked) {
-        const temp: string[] = [];
-        feed?.forEach(v => temp.push(v.id.toString()));
-        setBox(temp);
-        await axios.post("http://localhost:3000/all", {
-          id: temp,
-        });
-      } else {
-        setBox([]);
-        await axios.post("http://localhost:3000/all_delete", {
-          id: [],
-        });
-      }
-    } catch (error) {
-      if (error instanceof Error) {
-        console.log(error.message);
-      }
-    }
-  };
+  // const allCheckHandler = async (checked: boolean) => {
+  //   try {
+  //     if (checked) {
+  //       const temp: string[] = [];
+  //       feed?.forEach(v => temp.push(v.id.toString()));
+  //       setBox(temp);
+  //       await axios.post("http://localhost:3000/all", {
+  //         id: temp,
+  //       });
+  //     } else {
+  //       setBox([]);
+  //       await axios.post("http://localhost:3000/all_delete", {
+  //         id: [],
+  //       });
+  //     }
+  //   } catch (error) {
+  //     if (error instanceof Error) {
+  //       console.log(error.message);
+  //     }
+  //   }
+  // };
 
   useEffect(() => {
     axios.get("/data/mock.json").then(res => {
@@ -75,7 +75,7 @@ const PlannerTodaySample = () => {
 
   return (
     <S.Ex onClick={detailPageMoveHandler}>
-      <input type="checkbox" onChange={event => allCheckHandler(event.currentTarget.checked)} />
+      {/* <input type="checkbox" onChange={event => allCheckHandler(event.currentTarget.checked)} /> */}
       <ul>
         {feed?.map(el => (
           <S.Aaa key={el.id}>

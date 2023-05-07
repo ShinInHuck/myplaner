@@ -1,8 +1,12 @@
+import * as S from "./Header.styled";
 const Header = () => {
   return (
-    <div>
-      <div>안녕하세요</div>
-    </div>
+    <S.Main>
+      <S.TodayBox>home</S.TodayBox>
+      <S.TodayBox>todayList</S.TodayBox>
+      <S.TodayBox>chart</S.TodayBox>
+      <S.TodayBox>allList</S.TodayBox>
+    </S.Main>
   );
 };
 

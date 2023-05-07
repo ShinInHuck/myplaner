@@ -2,6 +2,13 @@ import { ChangeEvent, useState } from "react";
 import styled from "styled-components";
 import { login } from "./login";
 
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 90%;
+`;
+
 const IsInput = styled.input`
   width: 120px;
   height: 40px;
@@ -80,12 +87,14 @@ function Side() {
   };
 
   return (
-    <div style={{ width: "100%" }}>
-      <IsInput type="text" name="changeId" onChange={onChangeHandeler} />
-      {form.changeId ? null : <div style={{ color: "red" }}>{errIdMessage}</div>}
-      <IsInput type="text" name="changePw" onChange={onChangeHandeler} />
-      {form.changePw ? null : <div style={{ color: "red" }}>{errPwMessage}</div>}
-      <IsButton onClick={onClickHandler}>버튼이다</IsButton>
+    <div>
+      <Container>
+        <IsInput type="text" name="changeId" onChange={onChangeHandeler} />
+        {form.changeId ? null : <div style={{ color: "red", padding: "3px" }}>{errIdMessage}</div>}
+        <IsInput type="text" name="changePw" onChange={onChangeHandeler} />
+        {form.changePw ? null : <div style={{ color: "red", padding: "3px" }}>{errPwMessage}</div>}
+        <IsButton onClick={onClickHandler}>버튼이다</IsButton>
+      </Container>
     </div>
   );
 }
