@@ -18,12 +18,12 @@ const PlannerTodayComplete = () => {
   }, []);
 
   return (
-    <S.Ex>
-      <h1 style={{ color: "white" }}>complete</h1>
+    <S.Main>
+      <S.Title>plans complete</S.Title>
       {feed?.map(el => (
-        <S.Li key={el.id}>{el.content}</S.Li>
+        <S.List key={el.id}>{el.content}</S.List>
       ))}
-    </S.Ex>
+    </S.Main>
   );
 };
 

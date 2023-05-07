@@ -1,5 +1,6 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { ChangeEvent, MouseEvent, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import * as S from "./PlannerTodaySample.styled";
 
 interface IMock {
@@ -9,12 +10,14 @@ interface IMock {
 
 const PlannerTodaySample = () => {
   const [box, setBox] = useState<string[]>([]);
-
+  const nav = useNavigate();
   console.log(box);
 
   const [feed, setFeed] = useState<IMock[]>();
-  const detailPageMoveHandler = () => {
-    console.log("아니다다다다다");
+
+  const detailPageMoveHandler = (event: MouseEvent<HTMLDivElement>) => {
+    event.stopPropagation();
+    nav("/detail");
   };
 
   const boxContainerHandler = async (checked: boolean, id: string) => {
@@ -66,16 +69,21 @@ const PlannerTodaySample = () => {
     });
   }, []);
 
+  const checkboxClickHandler = (event: MouseEvent<HTMLInputElement>) => {
+    event.stopPropagation();
+  };
+
   return (
     <S.Ex onClick={detailPageMoveHandler}>
-      <input type="checkbox" onChange={event => allCheckHandler(event.target.checked)} />
+      <input type="checkbox" onChange={event => allCheckHandler(event.currentTarget.checked)} />
       <ul>
         {feed?.map(el => (
           <S.Aaa key={el.id}>
             <S.Ccc
               id={el.id.toString()}
               type="checkbox"
-              onChange={event => boxContainerHandler(event.target.checked, event.target.id)}
+              onClick={checkboxClickHandler}
+              onChange={event => boxContainerHandler(event.currentTarget.checked, event.currentTarget.id)}
               checked={box.includes(el.id.toString()) ? true : false}
             />
             <S.LiText aaa={box} bbb={el.id}>

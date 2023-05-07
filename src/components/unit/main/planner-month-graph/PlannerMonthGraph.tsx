@@ -3,8 +3,9 @@ import styled from "styled-components";
 const Ex = styled.div`
   width: 95%;
   height: 300px;
-  background-color: blue;
+  background-color: #5966ac;
   border: 1px solid black;
+  border-radius: 20px;
 `;
 
 const PlannerMonthGraph = () => {

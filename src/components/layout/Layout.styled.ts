@@ -5,15 +5,17 @@ export const Contain = styled.div`
   width: 100vw;
   height: 100vh;
   display: flex;
+  background-color: black;
 `;
 
 export const Side = styled.aside`
   width: 15%;
   height: 100%;
-  background-color: skyblue;
+  background-color: #5966ac;
   border: 1px solid black;
   border-radius: 5px;
   margin-right: 15px;
+  border-radius: 20px;
 `;
 
 export const Box = styled.div`
@@ -23,8 +25,8 @@ export const Box = styled.div`
 
 export const Header = styled.header`
   height: 15%;
-  background-color: blue;
-  border-radius: 5px;
+  background-color: #5966ac;
+  border-radius: 20px;
   border: 1px solid black;
   margin-bottom: 15px;
 `;
@@ -43,6 +45,6 @@ export const Main = styled.main`
   overflow: scroll;
   height: 83%;
   border-radius: 5px;
-  background-color: yellow;
+  background-color: black;
   border: 1px solid black;
 `;

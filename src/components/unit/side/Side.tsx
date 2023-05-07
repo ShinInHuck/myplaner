@@ -3,20 +3,21 @@ import styled from "styled-components";
 import { login } from "./login";
 
 const IsInput = styled.input`
-  width: 150px;
-  height: 50px;
+  width: 120px;
+  height: 40px;
+  border-radius: 10px;
   transition: all 0.5s ease-in-out;
 
   &:focus {
-    width: 200px;
-    height: 80px;
+    width: 130px;
+    height: 50px;
     transition: all 0.5s ease-in-out;
   }
 `;
 
 const IsButton = styled.button`
-  width: 150px;
-  height: 80px;
+  width: 100px;
+  height: 40px;
   background-color: white;
   border: 1px solid black;
   border-radius: 10px;
@@ -24,8 +25,8 @@ const IsButton = styled.button`
 
   &:hover {
     cursor: pointer;
-    width: 200px;
-    height: 100px;
+    width: 110px;
+    height: 50px;
     background-color: black;
     font-size: 20px;
     color: white;
@@ -34,8 +35,8 @@ const IsButton = styled.button`
 `;
 
 function Side() {
-  // const [changeId, setChangeId] = useState("");
-  // const [changePw, setChangePw] = useState("");
+  //   const [changeId, setChangeId] = useState("");
+  //   const [changePw, setChangePw] = useState("");
   const [form, setForm] = useState({
     changeId: "",
     changePw: "",
@@ -53,21 +54,21 @@ function Side() {
     login(name, value, setIdErrMessage, setPwErrMessage);
   };
 
-  // const idOnChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
-  //   setChangeId(e.target.value);
-  //   if (e.target.value) {
-  //     setIdErrMessage("");
-  //   }
-  //   if (!e.target.value) {
-  //     setIdErrMessage("Id 적어");
-  //   }
-  // }
-  // const pwOnChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
-  //   setChangePw(e.target.value);
-  //   if (e.target.value) {
-  //     setPwErrMessage("");
-  //   }
-  // }
+  //   const idOnChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
+  //     setChangeId(e.target.value);
+  //     if (e.target.value) {
+  //       setIdErrMessage("");
+  //     }
+  //     if (!e.target.value) {
+  //       setIdErrMessage("Id 적어");
+  //     }
+  //   };
+  //   const pwOnChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
+  //     setChangePw(e.target.value);
+  //     if (e.target.value) {
+  //       setPwErrMessage("");
+  //     }
+  //   };
 
   const onClickHandler = () => {
     if (!form.changeId) {

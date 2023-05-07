@@ -1,3 +1,4 @@
+import Header from "../unit/header/Header";
 import Side from "../unit/side/Side";
 import * as S from "./Layout.styled";
 
@@ -12,7 +13,9 @@ const Layout = (props: ILayoutPropsType) => {
         <Side />
       </S.Side>
       <S.Box>
-        <S.Header>header</S.Header>
+        <S.Header>
+          <Header />
+        </S.Header>
         {/* <S.Navigation>navigation</S.Navigation> */}
         <S.Main>{props.children}</S.Main>
       </S.Box>

@@ -1,16 +1,19 @@
 import styled from "styled-components";
-
+import Chart from "./Chart";
 const Ex = styled.div`
   width: 25%;
   height: 300px;
-  background-color: greenyellow;
+  background-color: #a0e7f0;
   border: 1px solid black;
+  border-radius: 10px;
 `;
 
 const PlannerTodayGraph = () => {
   return (
     <Ex>
-      <div>원형 그래프</div>
+      <div>
+        <Chart />
+      </div>
     </Ex>
   );
 };

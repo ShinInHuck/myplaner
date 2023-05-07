@@ -3,8 +3,9 @@ import styled from "styled-components";
 export const Ex = styled.div`
   width: 25%;
   height: 300px;
-  background-color: pink;
+  background-color: #9dcaef;
   border: 1px solid black;
+  border-radius: 10px;
 `;
 
 interface CssProps {
