@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import * as S from "./Detail.styled";
 
 interface IMock {
@@ -15,6 +16,11 @@ const PlannerTodayDetail = () => {
   //   }, []);
 
   const [feed, setFeed] = useState<IMock[]>();
+  const nav = useNavigate();
+
+  const fatchPageMoveHandler = () => {
+    nav("/detail/fatch");
+  };
 
   useEffect(() => {
     axios.get("/data/mock.json").then(res => {
@@ -31,7 +37,7 @@ const PlannerTodayDetail = () => {
         ))}
       </S.List>
       <S.Footer>
-        <S.Button>수정</S.Button>
+        <S.Button onClick={fatchPageMoveHandler}>수정</S.Button>
       </S.Footer>
     </S.Main>
   );

@@ -8,6 +8,13 @@ export const Ex = styled.div`
   border-radius: 10px;
 `;
 
+export const Title = styled.div`
+  margin-top: 5%;
+  margin-right: 30%;
+  margin-bottom: 5%;
+  margin-left: 30%;
+`;
+
 interface CssProps {
   aaa: string[];
   bbb: number;

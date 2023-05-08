@@ -76,6 +76,7 @@ const PlannerTodaySample = () => {
   return (
     <S.Ex onClick={detailPageMoveHandler}>
       {/* <input type="checkbox" onChange={event => allCheckHandler(event.currentTarget.checked)} /> */}
+      <S.Title>Today ToDo</S.Title>
       <ul>
         {feed?.map(el => (
           <S.Aaa key={el.id}>
