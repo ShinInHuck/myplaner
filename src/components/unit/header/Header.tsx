@@ -2,10 +2,18 @@ import * as S from "./Header.styled";
 const Header = () => {
   return (
     <S.Main>
-      <S.TodayBox>home</S.TodayBox>
-      <S.TodayBox>todayList</S.TodayBox>
-      <S.TodayBox>chart</S.TodayBox>
-      <S.TodayBox>allList</S.TodayBox>
+      <div>
+        <img alt="home" src="image/home2.png" width={"60px"} height={"60px"}></img>
+      </div>
+      <div>
+        <img alt="todayTodo" src="image/todayTodo.png" width={"60px"} height={"60px"}></img>
+      </div>
+      <div>
+        <img alt="monthTodo" src="image/monthTodo.png" width={"60px"} height={"60px"}></img>
+      </div>
+      <div>
+        <img alt="chart" src="image/chart.png" width={"60px"} height={"60px"}></img>
+      </div>
     </S.Main>
   );
 };

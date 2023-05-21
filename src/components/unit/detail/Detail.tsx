@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { v4 as uuidV4 } from "uuid";
 import * as S from "./Detail.styled";
 
 interface IMock {
@@ -19,7 +20,7 @@ const PlannerTodayDetail = () => {
   const nav = useNavigate();
 
   const fatchPageMoveHandler = () => {
-    nav("/detail/fatch");
+    nav("/detail/write/1");
   };
 
   useEffect(() => {
@@ -28,12 +29,13 @@ const PlannerTodayDetail = () => {
       setFeed(data);
     });
   }, []);
+
   return (
     <S.Main>
       <S.Title>PlannerTodaySample</S.Title>
       <S.List>
         {feed?.map(el => (
-          <S.text key={el.id}>{el.content}</S.text>
+          <S.text key={uuidV4()}>{el.content}</S.text>
         ))}
       </S.List>
       <S.Footer>

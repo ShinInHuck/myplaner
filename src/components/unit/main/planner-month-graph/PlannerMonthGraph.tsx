@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import MonthChart from "./MonthChart";
 
 const Ex = styled.div`
   width: 95%;
@@ -11,7 +12,9 @@ const Ex = styled.div`
 const PlannerMonthGraph = () => {
   return (
     <Ex>
-      <div style={{ color: "white" }}>달 그래프</div>
+      <div>
+        <MonthChart />
+      </div>
     </Ex>
   );
 };

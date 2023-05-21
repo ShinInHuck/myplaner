@@ -24,6 +24,7 @@ export const Box = styled.div`
 `;
 
 export const Header = styled.header`
+  width: 100%;
   height: 15%;
   background-color: #5966ac;
   border-radius: 20px;

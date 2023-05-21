@@ -8,10 +8,16 @@ const Ex = styled.div`
   border-radius: 10px;
 `;
 
+const Title = styled.div`
+  margin-top: 10%;
+  margin-left: 38%;
+`;
+
 const PlannerTodayGraph = () => {
   return (
     <Ex>
       <div>
+        <Title>TodayChart</Title>
         <Chart />
       </div>
     </Ex>

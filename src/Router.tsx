@@ -13,7 +13,7 @@ const Router = () => {
       <Routes>
         <Route path="/" element={<MainContain />} />
         <Route path="/detail" element={<PlannerTodayDetail />} />
-        <Route path="/detail/fatch" element={<PlannerTodayDetailFatch />} />
+        <Route path="/detail/write/:id" element={<PlannerTodayDetailFatch />} />
         <Route path="/detail/Chart" element={<PlannerTodayGraph />} />
       </Routes>
     </BrowserRouter>
